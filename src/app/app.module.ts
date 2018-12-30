@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { TokenInterceptor } from './shared/token-interceptor';
-import { BooksModule } from './books/books.module';
-import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +18,7 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
-    BooksModule,
-    AdminModule
+    AppRoutingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
